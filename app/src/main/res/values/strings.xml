@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidShield Pro</string>
+    <string name="accessibility_service_label">KidShield Pro Lock Guard</string>
+    <string name="accessibility_service_description">Monitors selected kids apps (like YouTube), enforces Fake PIN lock overlay after timer ends, and protects KidShield Pro from unauthorized uninstall.</string>
+    <string name="device_admin_label">KidShield Pro Anti-Uninstall</string>
+    <string name="device_admin_description">Protects KidShield Pro from being uninstalled by children and strengthens lock enforcement.</string>
+</resources>

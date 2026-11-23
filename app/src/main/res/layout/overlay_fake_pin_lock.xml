@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF070B14"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="28dp"
+    android:paddingTop="56dp"
+    android:paddingBottom="32dp">
+
+    <!-- Status Pill -->
+    <TextView
+        android:id="@+id/tv_protection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#2200E5FF"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="5dp"
+        android:text="SCREEN LOCKED • समय समाप्त"
+        android:textColor="#00E5FF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Digital Clock -->
+    <TextView
+        android:id="@+id/tv_lock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif-light"
+        android:text="12:00"
+        android:textColor="#F8FAFC"
+        android:textSize="54sp" />
+
+    <TextView
+        android:id="@+id/tv_lock_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Enter PIN to Unlock / पिन दर्ज करें"
+        android:textColor="#CBD5E1"
+        android:textSize="15sp" />
+
+    <!-- PIN Dots Container -->
+    <LinearLayout
+        android:id="@+id/pin_dots_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot_1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/pin_dot_empty" />
+
+        <View
+            android:id="@+id/dot_2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/pin_dot_empty" />
+
+        <View
+            android:id="@+id/dot_3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/pin_dot_empty" />
+
+        <View
+            android:id="@+id/dot_4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/pin_dot_empty" />
+    </LinearLayout>
+
+    <!-- Error Message -->
+    <TextView
+        android:id="@+id/tv_pin_error"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="#EF4444"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Numeric Keypad -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        android:rowCount="4">
+
+        <TextView
+            android:id="@+id/key_1"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_2"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_3"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_4"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_5"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_6"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_7"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_8"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_9"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_clear"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="CLR"
+            android:textColor="#94A3B8"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/key_0"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/bg_fake_pin_key"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/key_del"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_margin="9dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="⌫"
+            android:textColor="#94A3B8"
+            android:textSize="22sp" />
+    </GridLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Parent Biometric Unlock Trigger -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_parent_fingerprint"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_fp_button"
+            android:contentDescription="Parent Fingerprint Unlock"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_fingerprint_vector" />
+
+        <TextView
+            android:id="@+id/tv_parent_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Parent Fingerprint / फिंगरप्रिंट से खोलें"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
